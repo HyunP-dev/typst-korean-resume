@@ -1,11 +1,10 @@
-#import "@preview/octique:0.1.0": *
-#import "template.typ": profile, resume, styled-table
+#import "template.typ": profile, resume, styled-table, github-repo
 
 #show: resume.with()
 
 = 이력서
 #profile(
-  photo: "박현 여권 사진.jpg",
+  photo: "photo.jpg",
   name: "박현",
   english-name: "Hyun Park",
   birth-year: 2000,
@@ -103,18 +102,18 @@
   [*분류*],
   
   [OSINT],
-  [#box(baseline: 10%, octique("mark-github")) HyunP-dev/flashlight],
+  [#github-repo(addr: "HyunP-dev/flashlight")],
   [Python 라이브러리],
   
   [OSINT],
-  [#box(baseline: 10%, octique("mark-github")) HyunP-dev/sanctions-list-transform],
+  [#github-repo(addr: "HyunP-dev/sanctions-list-transform")],
   [maltego transform],
   
   [디지털 포렌식],
-  [#box(baseline: 10%, octique("mark-github")) HyunP-dev/qforensics],
+  [#github-repo(addr: "HyunP-dev/qforensics")],
   [응용 프로그램],
   
   [디지털 포렌식],
-  [#box(baseline: 10%, octique("mark-github")) HyunP-dev/ocaml-forensics],
+  [#github-repo(addr: "HyunP-dev/ocaml-forensics")],
   [OCaml 라이브러리],
 )

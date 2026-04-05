@@ -1,3 +1,5 @@
+#import "@preview/octique:0.1.0": *
+
 #let resume(body) = {
   set page("a4", margin: 2cm)
   set text(font: "NanumMyeongjo", size: 9pt)
@@ -76,4 +78,10 @@
     ..rows,
     table.hline(stroke: (dash: "solid", thickness: 1.5pt)),
   )
+}
+
+#let github-repo(
+  addr: "gildong/example-repo"
+) = {
+  link("https://github.com/"+addr)[#box(baseline: 10%, octique("mark-github")) #{addr}]
 }
