@@ -1,6 +1,5 @@
 #let resume(body) = {
-  set page("a4")
-  set page(margin: 2cm)
+  set page("a4", margin: 2cm)
   set text(font: "NanumMyeongjo", size: 9pt)
   
   show heading.where(level: 1): set align(center)
@@ -8,8 +7,8 @@
   show heading.where(level: 1): set block(below: 28pt)
   
   show heading.where(level: 2): it => {
-    block(above: 20pt)
-    [■ #h(0.5em) #it.body]
+    block(above: 28pt)
+    [#h(-0.12em) ■ #h(0.25em) #it.body]
   }
   
   set table(inset: 9pt)
@@ -18,7 +17,7 @@
   body
 }
 
-#let stroke_style = stroke(dash: "dashed")
+#let __stroke_style = (dash: "dashed")
 
 #let profile(
   name: "홍길동",
@@ -34,15 +33,14 @@
 ) = {
   grid(
     columns: (auto, auto),
-    rows: 4.5cm,
     
     align(horizon, image(photo, height: 124pt, fit: "cover")),
     align(horizon, table(
       stroke: (x, y) => (
-        top: stroke_style,
-        bottom: stroke_style,
-        left: if x == 0 { none } else { stroke_style },
-        right: if x == 5 { none } else { stroke_style },
+        top: __stroke_style,
+        bottom: __stroke_style,
+        left: if x == 0 { none } else { __stroke_style },
+        right: if x == 5 { none } else { __stroke_style },
       ),
       columns: (auto, 1fr, auto, 1fr, auto, auto),
       
@@ -67,15 +65,15 @@
   table(
     columns: columns,
     stroke: (x, y) => (
-      top: stroke_style,
-      bottom: stroke_style,
-      left: if x == 0 { none } else { stroke_style },
-      right: if x == ncols - 1 { none } else { stroke_style },
+      top: if y == 1 { none } else { __stroke_style },
+      bottom: if y == 0 { (dash: "solid") } else { __stroke_style },
+      left: if x == 0 { none } else { __stroke_style },
+      right: if x == ncols - 1 { none } else { __stroke_style },
     ),
     fill: (x, y) => if y == 0 { rgb("#f7f7f7") } else { rgb("#ffffff") },
     align: center + horizon,
-    table.hline(stroke: stroke(dash: "solid", thickness: 1.5pt)),
+    table.hline(stroke: (dash: "solid", thickness: 1.5pt)),
     ..rows,
-    table.hline(stroke: stroke(dash: "solid", thickness: 1.5pt)),
+    table.hline(stroke: (dash: "solid", thickness: 1.5pt)),
   )
 }

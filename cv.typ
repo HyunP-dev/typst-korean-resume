@@ -1,4 +1,4 @@
-#import "template.typ": *
+#import "template.typ": profile, resume, styled-table
 
 #show: resume.with()
 
@@ -24,6 +24,7 @@
   [*학교명 및 전공*],
   [*학점*],
   [*소재지*],
+  
   [2020. 03 \~ 2024. 02],
   [한림대학교 소프트웨어학부],
   [3.88 / 4.5],
@@ -36,10 +37,13 @@
   columns: (auto, 1fr),
   [*분류*],
   [*기술*],
+  
   [Languages],
   [Fortran, Python, R, C\#, Java, C/C++, JavaScript, OCaml],
+  
   [Frameworks],
   [.NET Framework, Qt, Apache Tomcat],
+  
   [Domains],
   [Digital Forensics, Machine Learning],
 )
@@ -51,10 +55,30 @@
   [*교육기간*],
   [*교육명*],
   [*기관*],
+  
   [2023. 07. 23 \~ 2023. 08. 05],
   [Culture and Computer Sciences course],
   [University of York],
 )
+
+== 연구실 활동
+#styled-table(
+  ncols: 3,
+  columns: (auto, 1fr, auto),
+  [*활동기간*],
+  [*소속*],
+  [*분야*],
+  
+  [2021. 08 \~ 2023. 12],
+  [한림대학교 임베디드 연구실],
+  [신호 처리 및 안드로이드 앱 개발],
+  
+  [2023. 07 \~ 2023. 12],
+  [한림대학교 디지털의료 미래연구소],
+  [기계 학습 및 데이터 시각화],
+)
+
+#pagebreak()
 
 == 학술 활동
 #styled-table(
@@ -63,6 +87,7 @@
   [*저널*],
   [*논문명*],
   [*출간일*],
+
   [Diagnostics],
   [A Virtual Reality-Based Multimodal Approach to Diagnosing Panic Disorder and Agoraphobia Using Physiological Measures: A Machine Learning Study],
   [2025. 09. 03],
