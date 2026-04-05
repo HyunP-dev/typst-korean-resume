@@ -1,3 +1,4 @@
+#import "@preview/octique:0.1.0": *
 #import "template.typ": profile, resume, styled-table
 
 #show: resume.with()
@@ -87,8 +88,33 @@
   [*저널*],
   [*논문명*],
   [*출간일*],
-
+  
   [Diagnostics],
   [A Virtual Reality-Based Multimodal Approach to Diagnosing Panic Disorder and Agoraphobia Using Physiological Measures: A Machine Learning Study],
   [2025. 09. 03],
+)
+
+== 오픈소스 활동
+#styled-table(
+  ncols: 3,
+  columns: (auto, 1fr, auto),
+  [*분야*],
+  [*프로젝트명*],
+  [*분류*],
+  
+  [OSINT],
+  [#box(baseline: 10%, octique("mark-github")) HyunP-dev/flashlight],
+  [Python 라이브러리],
+  
+  [OSINT],
+  [#box(baseline: 10%, octique("mark-github")) HyunP-dev/sanctions-list-transform],
+  [maltego transform],
+  
+  [디지털 포렌식],
+  [#box(baseline: 10%, octique("mark-github")) HyunP-dev/qforensics],
+  [응용 프로그램],
+  
+  [디지털 포렌식],
+  [#box(baseline: 10%, octique("mark-github")) HyunP-dev/ocaml-forensics],
+  [OCaml 라이브러리],
 )
