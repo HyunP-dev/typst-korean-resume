@@ -89,7 +89,7 @@
   [*출간일*],
   
   [Diagnostics],
-  [A Virtual Reality-Based Multimodal Approach to Diagnosing Panic Disorder and Agoraphobia Using Physiological Measures: A Machine Learning Study],
+  [#link("https://doi.org/10.3390/diagnostics15172239")[A Virtual Reality-Based Multimodal Approach to Diagnosing Panic Disorder and Agoraphobia Using Physiological Measures: A Machine Learning Study]],
   [2025. 09. 03],
 )
 
