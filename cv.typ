@@ -99,7 +99,7 @@
   ncols: 3,
   columns: (auto, 1fr, auto),
   [*분야*],
-  [*프로젝트명*],
+  [*저장소*],
   [*분류*],
   
   [OSINT],
