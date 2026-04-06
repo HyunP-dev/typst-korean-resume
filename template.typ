@@ -51,8 +51,8 @@
       [*이름*], [#{ name }], [*영문 이름*], [#{ english-name }], [*출생년도*], [#{ birth-year }년생],
       [*지원분야*], table.cell(colspan: 3)[#{ position }], [*경력*], [#{ experiences }],
       [*휴대폰*], [#{ tel }], [*홈페이지*],
-      table.cell(colspan: 3, stroke: (right: none))[#link("https://"+website)[#{website}]],
-      [*E-mail*], table.cell(colspan: 5, stroke: (right: none))[#link("mailto:"+email)[#{email}]],
+      table.cell(colspan: 3, stroke: (right: none))[#link("https://" + website)[#{ website }]],
+      [*E-mail*], table.cell(colspan: 5, stroke: (right: none))[#link("mailto:" + email)[#{ email }]],
       [*주소*], table.cell(colspan: 5, stroke: (right: none))[#{ address }],
       table.hline(stroke: stroke(dash: "solid", thickness: 1.5pt)),
     )),
@@ -81,7 +81,7 @@
 }
 
 #let github-repo(
-  addr: "gildong/example-repo"
+  addr: "gildong/example-repo",
 ) = {
-  link("https://github.com/"+addr)[#box(baseline: 10%, octique("mark-github")) #{addr}]
+  link("https://github.com/" + addr)[#box(baseline: 10%, octique("mark-github")) #{ addr }]
 }
